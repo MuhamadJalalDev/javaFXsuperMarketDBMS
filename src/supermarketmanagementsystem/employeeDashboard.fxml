@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketmanagementsystem.EmployeeDashboardController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="-6.333333333333333" prefHeight="600.0" prefWidth="1100.0" stylesheets="@DashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.333333333333333" AnchorPane.rightAnchor="8.333333333333258" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="1135.0" styleClass="semi-top-form" stylesheets="@DashboardDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="6.666666666666667" layoutY="-77.0" prefHeight="37.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@DashboardDesign.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button fx:id="P_close" layoutX="1030.0" layoutY="6.0" mnemonicParsing="false" onAction="#close" prefHeight="22.0" prefWidth="59.0" styleClass="close" stylesheets="@DashboardDesign.css">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="985.0" layoutY="6.0" mnemonicParsing="false" onAction="#minimize" prefHeight="24.0" prefWidth="45.0" styleClass="minimize" stylesheets="@DashboardDesign.css">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="MINUS" size="1.2em" />
+                                 </graphic>
+                              </Button>
+                              <FontAwesomeIcon glyphName="SHOPPING_CART" layoutX="10.0" layoutY="24.0" size="1.5em" />
+                              <Label layoutX="35.0" layoutY="8.0" text="Super Market System| Employee Portal">
+                                 <font>
+                                    <Font name="Tahoma" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@DashboardDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="62.0" layoutY="130.0" size="8em" />
+                        <Label layoutX="63.0" layoutY="144.0" text="Welcome," textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma" size="17.0" />
+                           </font></Label>
+                        <Label fx:id="purchase_employee" alignment="CENTER" layoutX="77.0" layoutY="165.0" text="User" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Line endX="109.66667175292969" endY="1.52587890625E-5" layoutX="73.0" layoutY="199.0" startX="-53.666664123535156" stroke="WHITE" />
+                        <Button layoutX="10.0" layoutY="227.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="180.0" styleClass="nav-btn-default" stylesheets="@DashboardDesign.css" text="Purchase">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SHOPPING_CART" size="1.5em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="logout" layoutX="10.0" layoutY="515.0" mnemonicParsing="false" onAction="#logout" stylesheets="@DashboardDesign.css">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="logout-btn" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="60.0" layoutY="522.0" text="Sign Out" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="nav-form" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-7.0" prefHeight="554.6666666666666" prefWidth="898.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="576.0" layoutY="16.0" prefHeight="522.0" prefWidth="320.0" stylesheets="@DashboardDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="37.0" text="Brand Name:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="purchase_brand" layoutX="124.0" layoutY="35.0" prefHeight="30.0" prefWidth="171.0" styleClass="textfield" stylesheets="@DashboardDesign.css" />
+                                    <Label layoutX="13.0" layoutY="86.0" text="Product Name:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="purchase_productName" layoutX="127.0" layoutY="84.0" prefHeight="30.0" prefWidth="163.0" promptText="Choose" styleClass="combobox" stylesheets="@DashboardDesign.css" />
+                                    <Label layoutX="54.0" layoutY="133.0" text="Quantity:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Spinner fx:id="purchase_quantity" layoutX="127.0" layoutY="130.0" onMouseClicked="#purchaseSpinnerValue" prefHeight="30.0" prefWidth="107.0" />
+                                    <Button fx:id="purchase_addBtn" layoutX="196.0" layoutY="210.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="94.0" styleClass="add-btn" stylesheets="@DashboardDesign.css" text="add" />
+                                    <Label layoutX="111.0" layoutY="322.0" text="Total:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="purchase_total" layoutX="162.0" layoutY="320.0" prefHeight="25.0" prefWidth="103.0" text="\$0.0" textFill="#1e6e23">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="purchase_pay" layoutX="181.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0" styleClass="pay" stylesheets="@DashboardDesign.css" text="Pay" />
+                                    <Button fx:id="purchase_receiptBtn" layoutX="41.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0" styleClass="reciept" stylesheets="@DashboardDesign.css" text="Receipt" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="18.0" layoutY="16.0" prefHeight="522.0" prefWidth="541.0" stylesheets="@DashboardDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="purchase_tableView" layoutX="14.0" layoutY="14.0" prefHeight="496.0" prefWidth="513.0">
+                                      <columns>
+                                        <TableColumn fx:id="purchase_col_brand" prefWidth="151.99997329711914" text="Product Type" />
+                                        <TableColumn fx:id="purchase_col_productName" prefWidth="152.0000457763672" text="Product Name" />
+                                          <TableColumn fx:id="purchase_col_quantity" prefWidth="83.33331298828125" text="Quantity" />
+                                          <TableColumn fx:id="purchase_col_price" prefWidth="132.66665649414062" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
